@@ -1,4 +1,4 @@
-# num = int(input("Enter a Number:"))
+
 for i in range(100,1000,1):
     n = i
     sum = 0
