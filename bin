@@ -1,0 +1,18 @@
+list01 = []
+n = int(input("Enter the No of element:"))
+for i in range(n):
+    app2 = int(input())
+    list01.append(app2)
+print(list01)
+list01.sort()
+print("Sorted List :",list01)
+len1 = len(list01)
+for r in range(len1):
+    start = 0
+    end  = len1 - 1
+    mid = (start+end) // 2
+    if mid == 
+'''
+Create a python list insert some element into it . Get the number from 
+user and check whether
+'''
