@@ -1,0 +1,25 @@
+'''
+Q. Write a python class Bank. Derive class custumer from the base class bank .Create new account for a customer and handle basic banking operations deposit and withdraw.
+''' 
+class BANK:
+    def __init__(self) :
+        self.name=""
+        self.addr=""
+        self.ac_no=0
+        self.bal=0
+    def create_ac(self):
+        name = input("Enter the Name of Customer:")
+        addr = input("Enter the Address:")
+        ac_no = int(input("Create your A/C No:"))
+        self.ac_no = ac_no
+        print("--->Your Account Created Successfully")
+    def deposit(self):
+        amount = int(input("Deposit Amount:"))
+        self.bal += amount
+    def check_bal(self):
+        print("Name :",self.name)
+        print("A/C :",self.ac_no)
+        print("Balance :",self.bal)
+    def withdraw(self):
+        withdraw_am = int(input("Withdraw Amount:"))
+        self.bal -= withdraw_am
