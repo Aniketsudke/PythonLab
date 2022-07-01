@@ -1,25 +1,48 @@
 '''
 Q. Write a python class Bank. Derive class custumer from the base class bank .Create new account for a customer and handle basic banking operations deposit and withdraw.
 ''' 
-class BANK:
-    def __init__(self) :
-        self.name=""
-        self.addr=""
-        self.ac_no=0
-        self.bal=0
-    def create_ac(self):
-        name = input("Enter the Name of Customer:")
-        addr = input("Enter the Address:")
-        ac_no = int(input("Create your A/C No:"))
-        self.ac_no = ac_no
-        print("--->Your Account Created Successfully")
-    def deposit(self):
-        amount = int(input("Deposit Amount:"))
-        self.bal += amount
-    def check_bal(self):
-        print("Name :",self.name)
-        print("A/C :",self.ac_no)
-        print("Balance :",self.bal)
-    def withdraw(self):
-        withdraw_am = int(input("Withdraw Amount:"))
-        self.bal -= withdraw_am
+class bank:
+    def _init_(self):
+        self.cn=" "
+        self.ca=""
+        self.an=0
+        self.cb=0
+    def acc_create(self,cn,ca,an,cb):
+        self.cn=cn
+        self.ca=ca
+        self.an=an
+        self.cb=cb
+    def chbl(self):
+        print("custumer naem",self.cn)
+        print("custumer Address",self.ca)
+        print("custumer acc no",self.an)
+        print("custumer bank bakanve",self.cb)
+    def upbl(self):
+        print("custumer updated balanceis",self.cb)
+class cust(bank):
+    def withdraw(self,amt):
+        self.cb=self.cb-amt
+    def deposit(self,amt):
+        self.cb=self.cb+amt
+ob=cust()
+choice=0
+while(choice!=5):
+    choice=int(input('''1. create account 2.chk bal 3. deposit 4. withdraw 5. exit'''))
+    if (choice==1):
+        cn=input("enetr name ")
+        ca=input("enter address ")
+        an=eval(input("enter acc no."))
+        cb=eval(input("enetr initail balance"))
+        ob.acc_create(cn,ca,an,cb)
+    if (choice==2):
+        ob.chbl()
+    if (choice==3):
+        amt=eval(input("enter amount to deposit"))
+        ob.deposit(amt)
+        ob.upbl()
+    if (choice==4):
+        amt=eval(input("enter amount to withdraw"))
+        ob.withdraw(amt)
+        ob.upbl()
+
+
