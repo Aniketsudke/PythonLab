@@ -1,0 +1,7 @@
+# To check whether a number is palindrome or not?
+num = input("Enter the number:")
+num_r = num[::-1]
+if num == num_r :
+    print("This is Palindrone Number")
+else:
+    print("This is not Palindrone Number")
